@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './components/NavBar'
 import Aboutme from './components/Aboutme';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -12,7 +14,9 @@ function App() {
     <main className='App'> 
       <Navbar />
       <Aboutme />
-      <Projects />
+      <Projects />å
+      <Skills />
+      <Contact />
     </main>
   )
     

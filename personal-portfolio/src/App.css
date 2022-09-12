@@ -22,6 +22,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  .nav-list {
+    padding: 0;
+  }
 
   .nav-header {
     font-size: 20px;
@@ -37,7 +40,6 @@ body {
 /* About Me Component*/
 
 .about-me {
-  max-width: 1200px;
   border: 3px solid black;
   display: flex;
   justify-content: center;
@@ -45,7 +47,7 @@ body {
   margin: 0 15vw;
   gap: 20px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   margin-top: 60px;
 
 }
@@ -62,6 +64,7 @@ body {
 .main-paragraph {
   max-width: 500px;
   color: #7c7c7c;
+  text-indent: 35px;
 }
 
 .content-two {
@@ -80,10 +83,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .content-two > *:hover {
   background-color: #d1d1e1;
+  transform: scale(0.9);
 }
 
 img {
@@ -91,7 +97,7 @@ img {
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 750px){
     .about-me{
       display: flex;
       flex-direction: column;
@@ -110,31 +116,46 @@ img {
     }
 }
 
+
+
+
+
+
+/* Projects Component */
+
 .projects-tab {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  background-color: #d1d1e9;
+  max-width: 100vw;
+  height: auto;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
-/* Projects Component */
+
+.Projects-tab-heading {
+  font-size: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .project-card {
   width: 280px;
   height: 160px;
-  background: #d1d1e9;    
+  background: #fffffe;    
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   transition: 0.7s;
   cursor: pointer;
-}
-
-.cards {
-  display: flex;
-}
-
-.project-card {
   margin: 20px
 }
 
@@ -147,6 +168,9 @@ img {
   .cards {
     display: flex;
     flex-direction: column;
+  }
+  .Projects-tab-heading {
+    font-size: 30px;
   }
 }
 
@@ -172,4 +196,44 @@ img {
 
 .info-div-paragraph {
   text-indent: 25px;
+}
+
+
+
+
+
+
+/* Skills Component */
+
+.skills {
+  width: 100%;
+  height: 500px;
+  background-color: #f9f4ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-grid {
+  width: 60%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.ex {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+
+
+
+/* Contact Component */
+
+.contact {
+  width: 100%;
+  height: 500px;
 }

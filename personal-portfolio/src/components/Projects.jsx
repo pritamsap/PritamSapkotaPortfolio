@@ -1,14 +1,10 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import Data from '../components/Data';
-
-
-
-
+import { projectData } from '../components/Data';
 
 
 export default function Projects() {
-    const cards = Data.map(item => {
+    const cards = projectData.map(item => {
         return (
             <ProjectCard 
                 img = {item.img}
@@ -20,7 +16,7 @@ export default function Projects() {
 
     return (
         <div className='projects-tab'>
-            <h2>Projects Built</h2>
+            <h2 className='Projects-tab-heading'>PROJECTS BUILT</h2>
             <div className='cards'>
                 {cards}
             </div>
