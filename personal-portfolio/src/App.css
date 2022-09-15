@@ -1,3 +1,4 @@
+
 body {
   background-color: #fffffe;
   color: #2b2c34;
@@ -236,4 +237,126 @@ img {
 .contact {
   width: 100%;
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.scroll-up {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.scroll-up-icon {
+  transition: 1s;
+  width: 50px;
+  scroll-behavior: smooth;
+
+}
+
+.scroll-up-icon:hover {
+  transform: scale(0.9);
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+  
+ 
+}
+.contact-side {
+  width: 800px;
+  height: 370px;
+  background-color: #2b2c34;
+  border-radius: 10px;
+  background-color: #f0f0f0
+  ;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  
+}
+
+.contact-heading {
+  margin-bottom: -10px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+
+.name, .email {
+  width: 300px;
+  height: 40px;
+  background-color:#fffffe;
+  margin: 5px;
+  border-radius: 7px;
+  font-size: 16px;
+  border: 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
+}
+
+.message {
+  border: 0px;
+  width: 615px;
+  height: 200px;
+  background-color: #fffffe;
+  border-radius: 7px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.submit-button {
+  width: 625px;
+  height: 30px;
+  border: 0px;
+  border-radius: 7px;
+  margin-top: 5px;
+  background-color: #e6fffb;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+
+.resource-side {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 4;
+  background-color: #fffffe;
+}
+
+.button-two {
+  width: 50px;
+  height: 50px;
+  background-color: #1890ff;
+  border-radius: 1100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.button-two:hover {
+  background-color:  #69c0ff;
+}
+
+
+
+
