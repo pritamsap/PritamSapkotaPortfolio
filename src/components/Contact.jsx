@@ -4,14 +4,10 @@ import React from 'react';
 export default function Contact(props) {
     return (
         <div className='contact'>
-            {/* <div className='scroll-up'>
-                <a href=".Aboutme.jsx">
-                    <img className='scroll-up-icon' src = "../images/arrowup.svg"></img>
-                    </a>
-            </div> */}
+          
 
                 <div className='contact-side'>
-                    <h3 className='contact-heading'>Contact Form</h3>
+                    <h3 className='contact-heading'>SEND EMAIL</h3>
                     <form className='form-box' name='contact' action="/contact" method='post'>
                         <input type="hidden" name="form-name" value="contact"/>
 
@@ -25,9 +21,7 @@ export default function Contact(props) {
                     </form>
 
                  </div>
-
-                
-                    
+       
         </div> 
     )
     

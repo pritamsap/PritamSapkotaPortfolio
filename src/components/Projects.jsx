@@ -10,6 +10,8 @@ export default function Projects() {
                 img = {item.img}
                 title = {item.title}
                 description = {item.description}
+                eachlink = {item.eachlink}
+
             />
         )
     })
