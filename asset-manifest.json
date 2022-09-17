@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/PritamSapkotaPortfolio/static/css/main.0fcd9c41.css",
-    "main.js": "/PritamSapkotaPortfolio/static/js/main.6157d77e.js",
-    "static/media/logo.svg": "/PritamSapkotaPortfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/PritamSapkotaPortfolio/static/css/main.5caa3269.css",
+    "main.js": "/PritamSapkotaPortfolio/static/js/main.b0a9df0b.js",
+    "static/media/github.svg": "/PritamSapkotaPortfolio/static/media/github.b25fd4f29a428b02fcb7af2d91ff0958.svg",
+    "static/media/linkedin.svg": "/PritamSapkotaPortfolio/static/media/linkedin.a48fcf3241e5c9c25e82534c4d547573.svg",
     "index.html": "/PritamSapkotaPortfolio/index.html",
-    "main.0fcd9c41.css.map": "/PritamSapkotaPortfolio/static/css/main.0fcd9c41.css.map",
-    "main.6157d77e.js.map": "/PritamSapkotaPortfolio/static/js/main.6157d77e.js.map"
+    "static/media/email-line.svg": "/PritamSapkotaPortfolio/static/media/email-line.5f2a61d1dab8344f4e8cfe93c4b91877.svg",
+    "static/media/arrowup.svg": "/PritamSapkotaPortfolio/static/media/arrowup.287957471078ff5ceedcbdf4bc86bbae.svg",
+    "main.5caa3269.css.map": "/PritamSapkotaPortfolio/static/css/main.5caa3269.css.map",
+    "main.b0a9df0b.js.map": "/PritamSapkotaPortfolio/static/js/main.b0a9df0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fcd9c41.css",
-    "static/js/main.6157d77e.js"
+    "static/css/main.5caa3269.css",
+    "static/js/main.b0a9df0b.js"
   ]
 }
