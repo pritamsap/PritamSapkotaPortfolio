@@ -7,17 +7,17 @@ export default function Projects() {
     const cards = projectData.map(item => {
         return (
             <ProjectCard 
-                img = {item.img}
+                icon = {item.icon}
                 title = {item.title}
                 description = {item.description}
                 eachlink = {item.eachlink}
 
-            />
+            /> 
         )
     })
 
     return (
-        <div className='projects-tab'>
+        <div className='projects-tab' id="projects">
             <h2 className='Projects-tab-heading'>PROJECTS BUILT</h2>
             <div className='cards'>
                 {cards}

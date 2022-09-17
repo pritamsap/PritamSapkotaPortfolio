@@ -201,7 +201,7 @@ a:hover {
 
 .project-card {
   width: 280px;
-  height: 160px;
+  height: 200px;
   background: #ffffff;    
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   border-radius: 10px;
@@ -217,6 +217,36 @@ a:hover {
   transform: scale(0.9);
 }
 
+.project-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.source-btn, .live-btn {
+  width: 75px;
+  height: 35px;
+  background-color: #d4b106;
+  border-radius: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.5s;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+
+}
+
+.source-btn:hover, .live-btn:hover {
+  transform: scale(0.9);
+
+}
+
+.live-btn {
+  background-color: #1890ff;
+}
+
 
 .intro-div {
   display: flex;
@@ -228,9 +258,7 @@ a:hover {
 
 .intro-div > * {
   max-width: 200px;
-  padding-right: 7px;
-  
-  
+  padding-right: 7px; 
 }
   
 .info-div {
@@ -243,6 +271,8 @@ a:hover {
   text-indent: 25px;
 }
 
+
+
 @media (max-width: 750px) {
   .cards {
     display: flex;
@@ -252,6 +282,9 @@ a:hover {
     font-size: 30px;
   }
 }
+
+
+
 
 
 
@@ -279,9 +312,9 @@ a:hover {
   align-items: center;
 }
 
-.ex {
+.skills-icon-size > * {
   width: 50px;
-  height: 50px;
+  height: 70px;
   margin: 0 20px;
 }
 

@@ -8,14 +8,14 @@ export default function Skills() {
     const eachSkill = skills.map(item => {
         return (
             <SkillsCard 
-                img = {item.img}
+                Skillsicon = {item.Skillsicon}
             />
         )
     })
 
     return (
         
-        <div className='skills'>
+        <div className='skills' id="skills">
             <h1 className='skills-title'>SKILLS</h1>
             <div className='skills-grid'>
                 {eachSkill}

@@ -1,24 +1,19 @@
+import { Icon } from '@iconify/react';
+
 export const projectData =  [
 
     {
         title: 'Calculator',
         description: 'The shade is created when you add black to a hue. Again, when working in Figma, Sketch or any of the adobe programs, you can create a shade by  lowering the brightness value of your hue.',
-        img: '../images/calculator.svg',
+        icon: <Icon icon="flat-color-icons:calculator" />,
         eachlink: 'https://github.com/pritamsap/Project-Calculator',
 
     },
 
     {
-        title: 'FusionCoin',
-        description: 'The shade is created when you add black to a hue. Again, when working in Figma, Sketch or any of the adobe programs, you can create a shade by  lowering the brightness value of your hue.',
-        img: '../images/bitcoin.svg',
-        eachlink: 'https://github.com/pritamsap/fusioncoin',
-
-    },
-    {
         title: 'CompleteLearn',
         description: 'The shade is created when you add black to a hue. Again, when working in Figma, Sketch or any of the adobe programs, you can create a shade by  lowering the brightness value of your hue.',
-        img: '../images/rest-api.svg',
+        icon: <Icon icon="logos:apiary" />,
         eachlink: 'https://github.com/pritamsap/LearningExpress',
 
 
@@ -26,7 +21,16 @@ export const projectData =  [
     {
         title: 'EtchA-sketch',
         description: 'The shade is created when you add black to a hue. Again, when working in Figma, Sketch or any of the adobe programs, you can create a shade by  lowering the brightness value of your hue.',
-        img: '../images/sketch.svg',
+        icon: <Icon icon="ep:data-board" />,
+        eachlink: 'https://github.com/pritamsap/Etch-a-Sketch',
+
+
+    },
+
+    {
+        title: 'RockPaperScissors',
+        description: 'The shade is created when you add black to a hue. Again, when working in Figma, Sketch or any of the adobe programs, you can create a shade by  lowering the brightness value of your hue.',
+        icon: <Icon icon="icon-park:rock-gesture" />,
         eachlink: 'https://github.com/pritamsap/Etch-a-Sketch',
 
 
@@ -43,30 +47,46 @@ export const projectData =  [
 
 export const skills = [
     {
-        img: './images/html-5.svg'
+        Skillsicon: <Icon icon="logos:html-5" />
     },
     {
-        img: './images/css-3.svg'
+        Skillsicon:<Icon icon="logos:css-3" />
+
+
     },
     {
-        img: './images/javascript.svg'
+        Skillsicon:<Icon icon="akar-icons:react-fill" />
+
+
     },
     {
-        img: './images/git.svg'
+        Skillsicon:<Icon icon="fa:git-square" />
+
+
     },
     {
-        img: './images/python.svg'
+        Skillsicon:<Icon icon="logos:javascript" />
+
+
     },
     {
-        img: './images/spring-boot.svg'
+        Skillsicon:<Icon icon="bi:filetype-java" />
+
+
     },
     {
-        img: './images/git.svg'
+        Skillsicon:<Icon icon="logos:python" />
+
+
     },
     {
-        img: './images/python.svg'
+        Skillsicon:<Icon icon="emojione:letter-c" />
+
+
     },
     {
-        img: './images/spring-boot.svg'
+        Skillsicon:<Icon icon="logos:eclipse-icon" />
+
+
     },
 ];
