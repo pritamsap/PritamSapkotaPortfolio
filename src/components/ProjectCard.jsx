@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 export default function ProjectCard(props) {
@@ -7,14 +8,18 @@ export default function ProjectCard(props) {
     
     return (
             <div className='project-card-creation'>
-                <a href={props.eachlink}><div className='project-card'>
+                <div className='project-card'>
                             <div className='intro-div'>
                                 <div className='icon-size'>{props.icon}</div>
                                 <h3>{props.title}</h3>
                             </div>
                             <div className='project-btn'>
-                                <div className='source-btn'>Source</div>
-                                <div className='live-btn'>Demo</div>
+                                <a href={props.sourceLink}>
+                                    <div className='source-btn'>Source</div>
+                                </a>
+                                <a href={props.demoLink}>
+                                    <div className='live-btn'>Demo</div>
+                                </a>
                             </div>
                            
 
@@ -22,7 +27,7 @@ export default function ProjectCard(props) {
                                 <p className='info-div-paragraph'>{props.description}</p>
                             </div>
                 </div> 
-                </a>
+                
 
             
 

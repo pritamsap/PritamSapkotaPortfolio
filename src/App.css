@@ -208,24 +208,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   transition: 0.7s;
-  cursor: pointer;
   margin: 20px;
   color: #002329;
+  /*border: 2px solid #006d75;*/
 }
 
 .project-card:hover {
   transform: scale(0.9);
 }
-
 .project-btn {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
+
 .source-btn, .live-btn {
   width: 75px;
   height: 35px;
-  background-color: #d4b106;
+  background-color: #feffe6;
   border-radius: 10em;
   display: flex;
   justify-content: center;
@@ -234,17 +234,18 @@ a:hover {
   color: #ffffff;
   transition: 0.5s;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-
+  color: black;
+  cursor: pointer;
 
 }
 
 .source-btn:hover, .live-btn:hover {
   transform: scale(0.9);
-
 }
 
 .live-btn {
   background-color: #1890ff;
+  color: white;
 }
 
 
@@ -272,11 +273,11 @@ a:hover {
 }
 
 
-
 @media (max-width: 750px) {
   .cards {
     display: flex;
     flex-direction: column;
+    transition: 0.8s;
   }
   .Projects-tab-heading {
     font-size: 30px;

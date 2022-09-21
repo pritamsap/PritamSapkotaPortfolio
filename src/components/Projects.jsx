@@ -10,7 +10,8 @@ export default function Projects() {
                 icon = {item.icon}
                 title = {item.title}
                 description = {item.description}
-                eachlink = {item.eachlink}
+                sourceLink = {item.sourceLink}
+                demoLink = {item.DemoLink}
 
             /> 
         )

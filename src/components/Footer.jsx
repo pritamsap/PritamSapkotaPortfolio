@@ -21,7 +21,7 @@ export default function Footer() {
                         <img src = {Linkedinlogo}/>
                     </div>
                 </a>
-                <a href='pritamsap2@gmail.com'>
+                <a href='mailto:pritamsap2@gmail.com'>
                     <div className='button-two'>
                         <img src = {Email}/>
                     </div>
