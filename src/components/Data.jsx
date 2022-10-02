@@ -41,6 +41,16 @@ export const projectData =  [
         
     },
 
+    {
+        title: 'Landing Page',
+        description: 'Landing Page built with the use of HTML and CSS integration.',
+        icon: <Icon icon="el:website" />,
+        sourceLink: 'https://github.com/pritamsap/project-landingpage',
+        DemoLink: 'https://pritamsap.github.io/project-landingpage/',
+        
+    },
+
+
    
     
 ];
@@ -74,4 +84,18 @@ export const skills = [
     {
         Skillsicon:<Icon icon="logos:eclipse-icon" />
     },
+    {
+        Skillsicon:<Icon icon="mdi:microsoft-office" />
+
+    },
+    {
+        Skillsicon:<Icon icon="logos:mysql" />
+
+    },
+    {
+        Skillsicon:<Icon icon="fa-brands:node-js" />
+
+
+    },
+    
 ];

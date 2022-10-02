@@ -23,7 +23,7 @@ export default function Aboutme() {
                         </div>
                     </a>
 
-                    <a href='https://www.linkedin.com/in/pritam-sapkota-991723249/'>
+                    <a className='linkedin' href='https://www.linkedin.com/in/pritamsap'>
                         <div className='button-linkedin'>
                             <img className='link-buttons' src = {Linkedinlogo}/>
                         </div>

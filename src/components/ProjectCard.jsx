@@ -11,7 +11,7 @@ export default function ProjectCard(props) {
                 <div className='project-card'>
                             <div className='intro-div'>
                                 <div className='icon-size'>{props.icon}</div>
-                                <h3>{props.title}</h3>
+                                <h3 className='project-title'>{props.title}</h3>
                             </div>
                             <div className='project-btn'>
                                 <a href={props.sourceLink}>

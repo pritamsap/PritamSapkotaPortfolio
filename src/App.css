@@ -4,10 +4,10 @@ body {
   color: #002329;
  }
 
-
 a {
   text-decoration: none;
   color: #002329;
+  font-weight: bold;
 }
 
 a:hover {
@@ -58,7 +58,7 @@ a:hover {
 /* About Me Component*/
 
 .about-me {
-  height: 560px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,12 +76,12 @@ a:hover {
 
 .main-title {
   color: #002329;
-  font-size: 60px;
+  font-size: 70px;
   margin: 20px;
 }
 
 .main-title-name {
-  color: #13c2c2;
+  color: #2f54eb;
 }
 
 .main-paragraph {
@@ -94,34 +94,35 @@ a:hover {
 
 .content-two {
   display: flex;
-  gap: 10px;
+  gap: 22px;
 }
 
 .content-two > * {
-  width: 150px;
-  height: 50px;
-  background-color: #36cfc9;
-  border-radius: 0 5rem 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 8px 110px;
+  background-color: #597ef7;
   display: flex;
+  border: 2px solid #597ef7;
+  border-radius: 8px;
   align-items: center;
   justify-content: center;
   transition: 0.2s;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.linkedin {
+  background-color: #ffffff;
 }
 
 .content-two > *:hover {
-  background-color: #006d75;
+  background-color: #597ef7;
   transform: scale(0.9);
 }
 
 .button-linkedin {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  background-color: #1890ff;
 }
-.button-linkedin:hover {
-  background-color: #91d5ff;
+.linkedin:hover {
+  background-color: #fffffe;
 }
 
 .link-buttons {
@@ -159,12 +160,10 @@ a:hover {
     .link-buttons {
       width: 27px;
     }
+    .content-two > * {
+      padding: 3px 50px;
+    }
 
-    
-    /* .content-two > * {
-      width: 90px;
-      height: 40px;
-    } */
 }
 
 
@@ -179,7 +178,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  background-color: #87e8de;
+  background-color: #ffffff;
   max-width: 100vw;
   height: auto;
   flex-wrap: wrap;
@@ -189,7 +188,7 @@ a:hover {
 
 .Projects-tab-heading {
   font-size: 50px;
-  color: #00474f;
+  color: #000000;
 
 }
 
@@ -200,22 +199,29 @@ a:hover {
 }
 
 .project-card {
-  width: 280px;
-  height: 200px;
-  background: #ffffff;    
+  width: 400px;
+  height: 230px;
+  background-color: #597ef7; 
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   transition: 0.7s;
   margin: 20px;
-  color: #002329;
-  /*border: 2px solid #006d75;*/
+  color: #000000;
+  background-color: #597ef7;
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23bfb7cc' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+}
+
+.project-title {
+  color: #fffffe;
 }
 
 .project-card:hover {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
+
 .project-btn {
   display: flex;
   gap: 10px;
@@ -223,9 +229,9 @@ a:hover {
 }
 
 .source-btn, .live-btn {
-  width: 75px;
-  height: 35px;
-  background-color: #feffe6;
+  width: 110px;
+  height: 40px;
+  background-color: #597ef7;
   border-radius: 10em;
   display: flex;
   justify-content: center;
@@ -236,6 +242,7 @@ a:hover {
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   color: black;
   cursor: pointer;
+  border: 1.2px solid white;
 
 }
 
@@ -244,8 +251,8 @@ a:hover {
 }
 
 .live-btn {
-  background-color: #1890ff;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 
@@ -263,7 +270,7 @@ a:hover {
 }
   
 .info-div {
-  font-size: 10px;
+  font-size: 13px;
   display: flex;
   padding: 10px 20px;
 }
@@ -274,6 +281,11 @@ a:hover {
 
 
 @media (max-width: 750px) {
+
+  .project-card {
+    width: 300px;
+    height: 220px;
+  }
   .cards {
     display: flex;
     flex-direction: column;
@@ -290,8 +302,6 @@ a:hover {
 
 
 
-
-
 /* Skills Component */
 
 .skills {
@@ -301,7 +311,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 200px;
+  margin-top: 50px;
 }
 
 .skills-grid {
@@ -311,12 +322,14 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
 }
 
 .skills-icon-size > * {
   width: 50px;
   height: 70px;
-  margin: 0 20px;
+  margin: 0 30px;
+  padding: 20px 0;
 }
 
 
@@ -329,15 +342,17 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #597ef7;
+  padding: 50px 0;
+  
 }
 
 
 .contact-side {
-  width: 800px;
-  height: 450px;
- border-radius: 10px;
-  background-color: #f0f0f0;
+  width: 900px;
+  height: 480px;
+  border-radius: 7px;
+  background-color: #fffffe;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,7 +364,8 @@ a:hover {
 
 .contact-heading {
   margin-bottom: 20px;
-  font-weight: 420;
+  font-weight: 500;
+  font-size: 25px;
   
 }
 
@@ -368,10 +384,10 @@ a:hover {
   background-color:#ffffff;
   margin: 5px;
   border-radius: 7px;
-  font-size: 16px;
+  font-size: 18px;
   border: 0px;
   transition: 1s;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border: 2px solid #597ef7;
 
 
 }
@@ -382,31 +398,42 @@ a:hover {
   height: 200px;
   background-color: #ffffff;
   border-radius: 7px;
-  font-size: 16px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  font-size: 20px;
   transition: 1s;
   margin-top: 10px;
+  border: 2px solid #597ef7;
 
 }
 
 .submit-button {
   width: 625px;
-  height: 30px;
+  height: 40px;
   border: 0px;
-  border-radius: 7px;
+  border-radius: 10em;
   margin-top: 5px;
   background-color: #87e8de;
   font-weight: bold;
   transition: 1s;
   margin: 20px 0;
+  color: #fffffe;
   cursor: pointer;
+  border: 2px solid white;
+  background-image: linear-gradient(to right, #bae7ff, #597ef7);
+
+
+  
+}
+
+.submit-button:hover {
+  background-image: linear-gradient(to right, #91d5ff, #597ef7);
+
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   .contact-side {
     width: 315px;
-    height: 400px;
+    height: 450px;
     transition: 1s;
     font-size: 15px;
     margin: 0;
@@ -424,8 +451,6 @@ a:hover {
     width: 250px;
     transition: 1s;
     font-size: 13px;
-
-
   }
 
 }
@@ -441,10 +466,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #87e8de;
+  background-color: #597ef7;
   width: 100%;
   height: 100px;
-  margin-top: 50px;
 }
 
 .left-module {
@@ -466,7 +490,7 @@ a:hover {
 .button-two, .button-three {
   width: 40px;
   height: 40px;
-  background-color: #13c2c2;
+  background-color: #ffffff;
   border-radius: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   display: flex;
@@ -477,18 +501,19 @@ a:hover {
 }
 
 .button-two:hover, .button-three:hover {
-  background-color:  #08979c;
+  background-color:  #fffffe;
 }
 
 .button-three {
-  background-color: #40a9ff;
+  background-color: #ffffff;
 }
 
 .scroll-up-icon {
   transition: 1s;
-  width: 30px;
+  width: 35px;
   scroll-behavior: smooth;
   cursor: pointer;
+  padding: 0 10px;
 }
 
 .scroll-up-icon:hover {
@@ -505,8 +530,6 @@ a:hover {
   img {
     width: 15px;
   }
-
-  
   .scroll-up-icon {
     width: 20px;
   }
