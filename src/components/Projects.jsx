@@ -12,6 +12,7 @@ export default function Projects() {
                 description = {item.description}
                 sourceLink = {item.sourceLink}
                 demoLink = {item.DemoLink}
+                imageCard = {item.imageCard}
 
             /> 
         )
@@ -19,7 +20,7 @@ export default function Projects() {
 
     return (
         <div className='projects-tab' id="projects">
-            <h2 className='Projects-tab-heading'>PROJECTS BUILT</h2>
+            <h2 className='Projects-tab-heading'>PROJECTS</h2>
             <div className='cards'>
                 {cards}
             </div>

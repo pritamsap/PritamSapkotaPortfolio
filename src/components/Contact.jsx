@@ -30,7 +30,7 @@ export default function Contact(props) {
                             <input className='name' type="text" name="user_name" placeholder='Name' />
                             <input className='email' type="email" name="user_email" placeholder='Email' />
                         </div>
-                        <textarea className='message' name="message"  placeholder=' Message....'/>
+                        <textarea className='message' name="message"  placeholder=' Message...'/>
                         <input className='submit-button' type="submit" value="Send" />
                     </form>
 

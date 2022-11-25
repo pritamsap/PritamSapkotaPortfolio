@@ -8,9 +8,7 @@ export const projectData =  [
         icon: <Icon icon="flat-color-icons:calculator" />,
         sourceLink: 'https://github.com/pritamsap/Project-Calculator',
         DemoLink: 'https://pritamsap.github.io/Project-Calculator/',
-
-
-
+        imageCard: 'https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     },
 
     {
@@ -19,6 +17,8 @@ export const projectData =  [
         icon: <Icon icon="logos:apiary" />,
         sourceLink: 'https://github.com/pritamsap/LearningExpress',
         DemoLink: 'https://github.com/pritamsap/LearningExpress',
+        imageCard: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+
 
 
     },
@@ -28,6 +28,8 @@ export const projectData =  [
         icon: <Icon icon="ep:data-board" />,
         sourceLink: 'https://github.com/pritamsap/Etch-a-Sketch',
         DemoLink: 'https://pritamsap.github.io/Etch-a-Sketch/',
+        imageCard: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg',
+
 
 
     },
@@ -38,6 +40,8 @@ export const projectData =  [
         icon: <Icon icon="icon-park:rock-gesture" />,
         sourceLink: 'https://github.com/pritamsap/Rock-Paper-Scissors',
         DemoLink: 'https://pritamsap.github.io/Rock-Paper-Scissors/',
+        imageCard: 'https://images.pexels.com/photos/10506091/pexels-photo-10506091.jpeg?auto=compress&cs=tinysrgb&w=800',
+
         
     },
 
@@ -47,6 +51,19 @@ export const projectData =  [
         icon: <Icon icon="el:website" />,
         sourceLink: 'https://github.com/pritamsap/project-landingpage',
         DemoLink: 'https://pritamsap.github.io/project-landingpage/',
+        imageCard: 'https://images.unsplash.com/photo-1544474560-5b2a788d024a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+
+        
+    },
+
+    {
+        title: 'Country Guide',
+        description: 'Display stats about country, weather forecast and more.',
+        icon: <Icon icon="el:website" />,
+        sourceLink: 'https://github.com/pritamsap/CountryGuide',
+        DemoLink: 'https://pritamsap.github.io/CountryGuide/',
+        imageCard: 'https://images.unsplash.com/photo-1478860409698-8707f313ee8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+
         
     },
 

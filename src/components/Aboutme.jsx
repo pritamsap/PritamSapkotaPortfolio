@@ -10,8 +10,7 @@ export default function Aboutme() {
             <div className='about-me'>
                 <div className='content-one'>
                     <h1 className='main-title'>Hi, I am <span className='main-title-name'>Pritam</span></h1>
-                    <p className='main-paragraph'>I'm currently ungraduate in Computer Science Bachelor of science at 
-                     York University. </p>
+                    <p className='main-paragraph'>I am a ungraduate student at York University, pursuing Honours in Bachelor of Computer Science. </p>
 
 
                 </div>
