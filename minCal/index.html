@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MinCal – Nutrition & Weight Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../photos/LogoOne.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 1rem 3rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .screenshot {
+  display: block;
+  margin: 3rem auto;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+
+    .section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      color: #ddd;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .feature-list li {
+      background: rgba(255,255,255,0.03);
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      margin: 5rem 0 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .section h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>MinCal – Nutrition & Weight Tracker</h1>
+    <p>A thoughtfully designed health tracker that empowers you to build long-term, sustainable wellness habits with AI-enhanced insights and intuitive visual feedback.</p>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="../photos/minCal.png" alt="MinCal App Screenshot" class="screenshot" />
+  </div>
+  
+  <div class="section">
+    <h2>Track What Matters Most</h2>
+    <p>
+      MinCal makes it easy to log your daily nutrition and weight progress through a sleek, minimalist interface. With a focus on simplicity and clarity, users can quickly record meals, monitor calories, and see their wellness progress over time using dynamic visualizations.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>AI-Powered Calorie Estimation</h2>
+    <p>
+      Leveraging OpenAI's advanced APIs, MinCal helps estimate calorie counts with smart AI prompts, reducing the guesswork and making food logging faster and more accurate—even from photo inputs or simple text descriptions.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Privacy-Focused & Cloud Synced</h2>
+    <p>
+      Your data is securely stored and synced in the cloud using a robust backend powered by AWS EC2 and DynamoDB. Authentication is handled via AWS Cognito, ensuring complete privacy and seamless access across devices.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul class="feature-list">
+      <li>📊 Visual progress tracking for weight and calories</li>
+      <li>🥗 Nutrition logging with AI-based calorie estimation</li>
+      <li>🔒 Secure user authentication with JWT tokens</li>
+      <li>☁️ Real-time cloud sync using AWS services</li>
+      <li>🧠 Clean, minimalist UI built with SwiftUI</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>For more info on the code</h2>
+    <p>
+        <a href="https://github.com/pritamsap/CalCounter" style="color:#4ecdc4; font-weight:600;">GitHub – pritamsap/CalCounter</a>
+        <br/>
+    </p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Pritam Sapkota. All rights reserved.
+  </div>
+
+</body>
+</html>
