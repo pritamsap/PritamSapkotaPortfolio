@@ -1,108 +1,756 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pritam Sapkota</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #ffffff;
+      color: #1d1d1f;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem 2rem;
+      background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1d1d1f 0%, #666 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: #6e6e73;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.4;
+    }
+
+    .glass-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 24px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0, 122, 255, 0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    .glass-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #1d1d1f;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      color: #6e6e73;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .link-btn {
+      background: #007aff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    }
+
+    .link-btn:hover {
+      background: #0051d5;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      text-align: center;
+      margin: 4rem 0 3rem;
+      letter-spacing: -0.02em;
+      color: #1d1d1f;
+    }
+
+    .projects-scroll-wrapper {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-arrow:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .scroll-arrow.left {
+      left: 0;
+    }
+
+    .scroll-arrow.right {
+      right: 0;
+    }
+
+    .scroll-arrow svg {
+      width: 24px;
+      height: 24px;
+      stroke: #1d1d1f;
+    }
+
+    .scroll-arrow.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .projects-grid {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 0 0 2rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .projects-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .project-card {
+      min-width: 260px;
+      max-width: 260px;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 
+        0 24px 72px rgba(0, 0, 0, 0.15),
+        0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.05);
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 1;
+      background-size: cover;
+      background-position: center;
+      background-color: #f5f5f7;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .project-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
+    }
+
+    .project-content {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      flex: 1;
+    }
+
+    .project-subtitle {
+      font-size: 0.75rem;
+      color: #86868b;
+      font-weight: 400;
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .project-description {
+      font-size: 0.85rem;
+      color: #6e6e73;
+      line-height: 1.6;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card.expanded .project-description {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 1rem;
+    }
+
+    .expand-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 122, 255, 0.1);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .expand-btn:hover {
+      background: rgba(0, 122, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    .expand-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: #007aff;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card.expanded .expand-btn svg {
+      transform: rotate(180deg);
+    }
+
+    .project-link-btn {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(0, 122, 255, 0.2);
+      color: #007aff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card.expanded .project-link-btn {
+      opacity: 1;
+      max-height: 50px;
+    }
+
+    .project-link-btn:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: #007aff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+    }
+
+    .category-section {
+      margin: 4rem 0;
+    }
+
+    .category-title {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 2rem;
+      padding: 0 2rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+      padding: 6rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-title {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #1d1d1f;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 24px;
+      padding: 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #007aff;
+      box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 1rem;
+      background: #007aff;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    }
+
+    .contact-form button:hover {
+      background: #0051d5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .glass-cards {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+      }
+
+      .projects-scroll-wrapper {
+        padding: 0 3rem;
+      }
+
+      .contact-form {
+        padding: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Main card container -->
-  <div class="container">
-    <div class="card" id="myCard">
-      <div class="card-title">Hello, I am Pritam Sapkota</div>
-      <div class="card-description">I thrive on transforming creative ideas into reality.</div>
-    </div>
-    <div class="card" id="githubCard">
-      <div class="card-title">My Github</div>
-      <div class="card-description">All of my projects and contributions.</div>
+  <div class="hero">
+    <h1 class="hero-title">Hello, I am Pritam Sapkota</h1>
+    <p class="hero-subtitle">I thrive on transforming creative ideas into reality.</p>
+  </div>
+
+  <div class="glass-cards">
+    <div class="glass-card">
+      <h2 class="card-title">My Github</h2>
+      <p class="card-description">All of my projects and contributions.</p>
       <a href="https://github.com/pritamsap"><button class="link-btn">github.com/pritamsap</button></a>
     </div>
-    <div class="card" id="linkedCard">
-      <div class="card-title">LinkedIn</div>
-      <div class="card-description"></div>
+
+    <div class="glass-card">
+      <h2 class="card-title">LinkedIn</h2>
+      <p class="card-description">Let's connect and explore opportunities together.</p>
       <a href="https://www.linkedin.com/in/pritamsap/"><button class="link-btn">LinkedIn/pritamsap</button></a>
     </div>
   </div>
 
-  <div class="project-container">
-    <h2 class="projectContainerName">My Projects</h2>
-    <div class="project-scroll">
-      <a href="minCal" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/minCal.png');"></div>
-        <div class="project-title">MinCal 🥭</div>
-        <div class="project-description">
-          MinCal is a health-focused iOS app designed to help users build long-term healthy habits by tracking their nutrition intake and weight progress. It features intuitive charts that visualize trends over time and uses AI-powered calorie estimation to provide personalized insights. The app offers a seamless, secure experience, empowering users to make informed decisions and stay motivated on their wellness journey.
+  <h2 class="section-title">Featured Work</h2>
+
+  <div class="category-section">
+    <h3 class="category-title">iOS Development</h3>
+    <div class="projects-scroll-wrapper">
+      <button class="scroll-arrow left" onclick="scrollProjects(this, 'left')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="projects-grid" onscroll="updateArrows(this)">
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/minCal.png');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">MinCal</h3>
+                <p class="project-subtitle">Health & Nutrition Tracker</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              MinCal is a health-focused iOS app designed to help users build long-term healthy habits by tracking their nutrition intake and weight progress. It features intuitive charts that visualize trends over time and uses AI-powered calorie estimation to provide personalized insights.
+            </p>
+            <a href="minCal" class="project-link-btn">View Project</a>
+          </div>
         </div>
-      </a>
 
-          <a href="https://github.com/pritamsap/algora-backend" class="project-card">
-            <div class="project-image" style="background-image: url('./photos/algora.png');"></div>
-            <div class="project-title">Algora Financial Educational Platform 💳</div>
-            <div class="project-description">
-              Algora is an inclusive learning platform designed to make financial education accessible and personalized. Tailored for underrepresented communities, the app offers curated lessons on budgeting, saving, and investing guided by each user’s goals and experience level. It features an interactive learning journey with personalized recommendations and an AI-powered chatbot that provides real-time financial guidance, helping users make smarter money decisions with confidence.            </div>
-          </a>
-
-
-      <a href="https://github.com/pritamsap/BlossomVision" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/AppStoreImage.png');"></div>
-        <div class="project-title">Blossom Vision 🌸</div>
-        <div class="project-description">
-          An iOS app that uses Core ML and the live camera to recognize flowers in real time. Built with Swift, Vision, and CoreML, with a smooth SwiftUI interface. Includes offline inference and dynamic search for flower facts.
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/AppStoreImage.png');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Blossom Vision</h3>
+                <p class="project-subtitle">Flower Recognition</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              An iOS app that uses Core ML and the live camera to recognize flowers in real time. Built with Swift, Vision, and CoreML, with a smooth SwiftUI interface. Includes offline inference and dynamic search for flower facts.
+            </p>
+            <a href="https://github.com/pritamsap/BlossomVision" class="project-link-btn">View Project</a>
+          </div>
         </div>
-      </a>
 
-      <a href="https://github.com/pritamsap/CryptoX" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/cryptox.png');"></div>
-        <div class="project-title">CryptoX 🪙</div>
-        <div class="project-description">
-          A feature-rich cryptocurrency portfolio management app built with SwiftUI. It allows users to track their assets, view up-to-date market data, and retrieve real-time coin prices using integrated crypto APIs.
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/cryptox.png');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Blockbase</h3>
+                <p class="project-subtitle">Portfolio Management App</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              A feature-rich cryptocurrency portfolio management app built with SwiftUI. It allows users to track their assets, view up-to-date market data, and retrieve real-time coin prices using integrated crypto APIs.
+            </p>
+            <a href="https://github.com/pritamsap/CryptoX" class="project-link-btn">View Project</a>
+          </div>
         </div>
-      </a>
 
-      <a href="https://github.com/pritamsap/CountryGuide" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/countryguide.png');"></div>
-        <div class="project-title">CountryGuide 🌎</div>
-        <div class="project-description">
-          CountryGuide is a dynamic web app built with HTML, CSS, and JavaScript that provides comprehensive country information and guides. It features interactive maps via MapBox API, real-time weather forecasts, detailed country data from the REST Countries API, and current local time with timezone info using a Time API—all powered by geo-coordinates.
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/mic.jpg');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Clarison</h3>
+                <p class="project-subtitle">Intelligent Transcription</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              Clarison uses advanced AI to transcribe your voice recordings with exceptional accuracy, then automatically cleans and formats the text into professional documents. No more messy transcripts—just clear, readable text ready to use. Perfect for meetings, interviews, lectures, ideas, and more.
+            </p>
+            <a href="https://github.com/pritamsap/NetflixApplication" class="project-link-btn">View Project</a>
+          </div>
         </div>
-      </a>
 
-      <a href="https://github.com/pritamsap/NetflixApplication" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/netflix.png');"></div>
-        <div class="project-title">Netflix 🎥</div>
-        <div class="project-description">
-          Netflix-inspired app built with Swift and UIKit that lets users browse catalogs of trending, popular, and upcoming movies and TV shows. Features include searching for content, viewing detailed information and trailers, and downloading videos for offline access—managed using Core Data.
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/catalogsApp.jpg');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Osusa</h3>
+                <p class="project-subtitle">Find Clothes That Match You</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              SwiftUI app that lets users take pictures of their clothes and find matching outfits. Using Vision Framework, it identifies clothing items like shirts, pants, and accessories, then suggests combinations to create stylish looks. Features include organizing your wardrobe, discovering outfit matches, and managing your clothing catalog—all powered by SwiftUI.
+            </p>
+            <a href="https://github.com/pritamsap/NetflixApplication" class="project-link-btn">View Project</a>
+          </div>
         </div>
-      </a>
-
-      <a href="https://github.com/pritamsap/EECS-4413-SyntaxSquad-Backend" class="project-card">
-        <div class="project-image" style="background-image: url('./photos/ecom.jpg');"></div>
-        <div class="project-title">Shoppix – Ecommerce Platform 🛍️</div>
-        <div class="project-description">
-            Built and deployed a scalable full-stack e-commerce platform using React, SpringBoot, and MongoDB. Implemented key features such as user authentication, dynamic product catalog browsing, and comprehensive order lifecycle management. Leveraged Docker containerization for modular service deployment and hosted the application on Google Cloud Platform, achieving improved infrastructure scalability and reducing latency and page load times by over 60%.
-        </div>
-      </a>
+      </div>
+      <button class="scroll-arrow right" onclick="scrollProjects(this, 'right')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
     </div>
   </div>
 
+  <div class="category-section">
+    <h3 class="category-title">Full-Stack Web Application</h3>
+    <div class="projects-scroll-wrapper">
+      <button class="scroll-arrow left" onclick="scrollProjects(this, 'left')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="projects-grid" onscroll="updateArrows(this)">
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/voice.png');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Clarison</h3>
+                <p class="project-subtitle">Intelligent Transcription</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              Clarison uses advanced AI to transcribe your voice recordings with exceptional accuracy, then automatically cleans and formats the text into professional documents. No more messy transcripts—just clear, readable text ready to use. Perfect for meetings, interviews, lectures, ideas, and more.
+            </p>
+            <a href="https://github.com/pritamsap/Clarison--AI-Transcription-Intelligent-" class="project-link-btn">View Project</a>
+          </div>
+        </div>
 
-    <!-- Contact Form Section -->
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/map.png');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">CountryGuide</h3>
+                <p class="project-subtitle">Interactive Travel Guider</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              CountryGuide is a dynamic web app built with HTML, CSS, and JavaScript that provides comprehensive country information and guides. It features interactive maps via MapBox API, real-time weather forecasts, detailed country data from the REST Countries API, and current local time with timezone info.
+            </p>
+            <a href="https://github.com/pritamsap/CountryGuide" class="project-link-btn">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('./photos/shopping.avif');"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">SyntaxShop</h3>
+                <p class="project-subtitle">Full-Stack E-Commerce</p>
+              </div>
+              <button class="expand-btn" onclick="toggleCard(event)">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="project-description">
+              Built and deployed a scalable full-stack e-commerce platform using React, SpringBoot, and MongoDB. Implemented key features such as user authentication, dynamic product catalog browsing, and comprehensive order lifecycle management.
+            </p>
+            <a href="https://github.com/pritamsap/EECS-4413-SyntaxSquad-Backend" class="project-link-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-arrow right" onclick="scrollProjects(this, 'right')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="contact-section">
     <div class="contact-container">
       <h2 class="contact-title">Contact me</h2>
-      <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <form class="contact-form" action="https://formspree.io/f/mpwvlkej" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
         <button type="submit">Send Message</button>
-      </form>
+      </form>                
     </div>
-  </body>
-  </html>
-  
+  </div>
 
+  <script>
+    function toggleCard(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const card = event.currentTarget.closest('.project-card');
+      card.classList.toggle('expanded');
+    }
 
+    function scrollProjects(button, direction) {
+      const wrapper = button.closest('.projects-scroll-wrapper');
+      const grid = wrapper.querySelector('.projects-grid');
+      const scrollAmount = 280;
+      
+      if (direction === 'left') {
+        grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
 
+    function updateArrows(grid) {
+      const wrapper = grid.closest('.projects-scroll-wrapper');
+      const leftArrow = wrapper.querySelector('.scroll-arrow.left');
+      const rightArrow = wrapper.querySelector('.scroll-arrow.right');
+      
+      if (grid.scrollLeft <= 10) {
+        leftArrow.classList.add('hidden');
+      } else {
+        leftArrow.classList.remove('hidden');
+      }
+      
+      if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 10) {
+        rightArrow.classList.add('hidden');
+      } else {
+        rightArrow.classList.remove('hidden');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.projects-grid').forEach(grid => {
+        updateArrows(grid);
+      });
+    });
+  </script>
 </body>
 </html>
