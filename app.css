@@ -383,6 +383,14 @@ body {
   color: #fff;
 }
 
+.contact-para {
+  opacity: 0.7; /* fixed: was 70, should be 0.7 */
+  margin-bottom: 2.5rem; /* increased space before form */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .contact-form {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px) saturate(180%);

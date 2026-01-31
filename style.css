@@ -215,12 +215,15 @@ body {
     font-size: 2em;
     margin-bottom: 2rem;
   }
+
+ 
   
   .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem; /* gap between input, textarea, and button */
   }
+  
   
   .contact-form input,
   .contact-form textarea {
